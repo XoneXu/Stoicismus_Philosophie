@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/next";
+
 // List button logic
 document.querySelectorAll('.listbttn').forEach(button => {
     button.addEventListener("click", openlist);
