@@ -1,3 +1,4 @@
+
 // List button logic
 document.querySelectorAll('.listbttn').forEach(button => {
     button.addEventListener("click", openlist);
@@ -56,7 +57,7 @@ function popUpContent(card_id) {
         content = 
         `
             <span class="popup-close" id="popup-close">&times;</span>
-            <img src="epiktet_card.png" alt="Ephiktet" id="cardimg">
+            <img src="media/epiktet_card.png" alt="Ephiktet" id="cardimg">
             <h2>Epiktet (55-135 n. Chr.)</h2>
             <h3>Hintergrund</h3>
             <p>Ehemaliger Sklave des römischen Freigelassenen Epaphroditus. Nach seiner Freilassung gründete er eine Philosophenschule in Nicopolis (Griechenland).</p>            
@@ -75,7 +76,7 @@ function popUpContent(card_id) {
         content =
          `
             <span class="popup-close" id="popup-close">&times;</span>
-            <img src="seneca_card.png" alt="Seneca" id="cardimg">
+            <img src="media/seneca_card.png" alt="Seneca" id="cardimg">
             <h2>Seneca (4 v. Chr.-65 n. Chr.)</h2>
             <h3>Hintergrund</h3>
             <p>Römischer Politiker, Dichter und Berater des Kaisers Nero. Trotz seines Reichtums (er investierte klug in Landwirtschaft und Bergbau) betonte er die Tugend der Armut.</p>
@@ -96,7 +97,7 @@ function popUpContent(card_id) {
         content =
          `
             <span class="popup-close" id="popup-close">&times;</span>
-            <img src="marc_aurel_card.png" alt="Marc Aurel" id="cardimg">
+            <img src="media/marc_aurel_card.png" alt="Marc Aurel" id="cardimg">
             <h2>Marc Aurel (121-180 n. Chr.)</h2>
             <h3>Hintergrund</h3>
             <p>Römischer Kaiser und letzter der „fünf guten Kaiser“. Während er Kriege gegen Germanenstämme führte, schrieb er seine <em>Selbstbetrachtungen</em> im Krieglager.</p>
@@ -117,7 +118,7 @@ function popUpContent(card_id) {
         content = 
         `
             <span class="popup-close" id="popup-close">&times;</span>
-            <img src="zenon_card.png" alt="Zenon von Kition" id="cardimg">
+            <img src="media/zenon_card.png" alt="Zenon von Kition" id="cardimg">
             <h2>Zenon von Kition (ca. 334-262 v. Chr.)</h2>
             <h3>Hintergrund</h3>
             <p>Sohn eines wohlhabenden Kaufmanns aus Kition (Zypern). Nach einem Schiffbruch in Athen begann er, bei kynischen und platonischen Philosophen zu lernen. Später gründete er die Stoa am „Bemalten Säulengang“ (Stoa Poikile) in Athen.</p>
@@ -138,6 +139,9 @@ function popUpContent(card_id) {
     }
     popupWindow.innerHTML = content;
 
+    if (window.SimpleBar) {
+    new SimpleBar(popupWindow);
+}
     // Re-attach close event after replacing innerHTML
     document.getElementById('popup-close').onclick = () => popupOverlay.classList.remove('active');
 }

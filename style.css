@@ -62,7 +62,7 @@ html, body{
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-image: url(denker4.jpg);
+    background-image: url(media/denker4.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -127,6 +127,7 @@ html, body{
     text-shadow: black 0px 0px 10px;
     width: auto;
     height: 8vh;
+    min-width: 7vw;
 
 }
 .listcontent{
@@ -402,4 +403,14 @@ p, li, ul {
     font-size: 1em;
     text-shadow: 0 1px 4px #222;
     font-weight: 400;
+}
+.simplebar-scrollbar:before {
+    background: gold;
+    border-radius: 8px;
+    opacity: 1;
+}
+.simplebar-track.simplebar-vertical {
+    background: rgba(40, 40, 40, 0.5);
+    width: 12px;
+    border-radius: 8px;
 }
