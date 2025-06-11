@@ -6,7 +6,7 @@ export default function Page() {
             <Analytics />
         </div>
     )};
-
+Page();
 // List button logic
 document.querySelectorAll('.listbttn').forEach(button => {
     button.addEventListener("click", openlist);
