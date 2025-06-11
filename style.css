@@ -1,0 +1,405 @@
+html, body{
+    font-family: Arial, sans-serif;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    color: #f5e9c9;
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-shadow: 0 1px 4px #222;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    min-height: 100%;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #101010;
+    color: white;
+    text-align: center;
+    justify-content: space-between;
+}
+.navbar h1{
+    font-size: 5vh;
+    font-weight: bold;
+    text-shadow: black 0px 0px 10px;
+    text-shadow: white 1px 0px 3px;
+}
+.header{
+    width: 49%;
+}
+.buttons{
+    width: 49%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.main {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    text-shadow: black 0px 0px 10px;
+    align-items: center;
+    justify-content: center;  
+}
+.main::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url(denker4.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px); 
+    z-index: 0;
+}
+.main > * {
+    position: relative;
+    z-index: 1;
+}
+.content{
+    background-color: rgba(40, 40, 40, 0.65);
+    width: 70%;
+    border: white 3px double;
+    border-radius: 1.5vw;
+    margin: 2vh;
+    padding-bottom: 15px;
+    color: #f5e9c9;
+    text-shadow: 0 1px 4px #222;
+}
+.contentflex{
+    background-color: rgba(40, 40, 40, 0.65);
+    height: 90%;
+    width: 70%;
+    border: white 3px double;
+    border-radius: 1.5vw;
+    padding-bottom: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    color: #f5e9c9;
+    text-shadow: 0 1px 4px #222;
+}
+.btnsector{
+    background-color: rgba(57, 57, 57, 0.631);
+    width: 40vw;;
+    margin: 0 auto;
+    border: white 3px double;
+    border-radius: 10vw;
+    padding: 10px;
+}
+.footer{
+    position:relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(27, 27, 27, 0.65);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 0.8em;
+    margin: 0;
+}
+.button{
+    background-color: rgba(52, 52, 52, 0.793);
+    font-size: 1em;
+    color: white;
+    border: rgb(167, 167, 167) 2px double;
+    padding: 10px;
+    border-radius: 5vw;
+    text-shadow: black 0px 0px 10px;
+    width: auto;
+    height: 8vh;
+
+}
+.listcontent{
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+.listcontent.show{
+    max-height: 190vh;
+    opacity: 1;
+}
+.listcontent.hide{
+    max-height: 0;
+    opacity: 0;
+}
+.listcontent img{
+    width: 40%;
+    max-height: 50vh;
+    border-radius: 1vw;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 8px;
+}
+.listelemt{
+    background-color: rgba(40, 40, 40, 0.65);
+    border: rgb(0, 0, 0) 2px double;
+    border-radius: 1vw;
+    margin-bottom: 5px;
+    width: 85%;
+    color: #f5e9c9;
+    text-shadow: 0 1px 4px #222;
+}
+.listhr{
+    border: rgb(61, 61, 61) 1px double;
+}
+.listbttn{
+    background-color:rgba(40, 40, 40, 0);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 25px;
+}
+.listbttn.color{
+    color: black;
+}
+.listbttn:hover{
+    cursor: pointer;
+    animation: rotate 0.5s linear infinite;
+
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+ul{
+    text-align: left;
+    padding-left: 1.5em;
+}
+.button:hover{
+    background-color: rgba(69, 69, 69, 0.65);
+    cursor: pointer;
+}
+.card{
+    background-color: rgba(40, 40, 40, 0.65);
+    border: whitesmoke 2px solid;
+    border-radius: 1vw;
+    width: 70%;
+    height: 100%;
+    transition: transform 0.2s ease-in-out;
+    color: #f5e9c9;
+    text-shadow: 0 1px 4px #222;
+}
+.card img{
+    width: 50%;
+    height: auto;
+    border-radius: 1vw;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 8px;
+}
+.grid{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+}
+.card:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+.popup-overlay {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(40, 40, 40, 0.65);
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-overlay.active {
+    display: flex;
+}
+
+.popup-window {
+    background: rgba(40, 40, 40, 0.65);
+    border: 3px double #fff;
+    border-radius: 1.5vw;
+    padding: 2em 3em;
+    color: white;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    position: relative;
+    min-width: 300px;
+    width: 60vw;
+    height: 80vh;
+    text-align: center;
+    overflow-y: auto;
+}
+
+.popup-window h2, .popup-window h3 {
+    color: gold;
+    text-shadow: 0 2px 8px #222, 0 0 2px #ffe082;
+}
+
+.popup-window p, .popup-window li {
+    color: #f5e9c9;
+    text-shadow: 0 1px 4px #111;
+}
+
+.popup-close {
+    position: absolute;
+    top: 0.5em;
+    right: 1em;
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.2s;
+}
+.popup-close:hover {
+    color: #aaa;
+}
+#cardimg{
+    width: 50vw;
+    height: auto;
+    max-height: 50vh;
+}
+.timeline {
+    position: relative;
+    margin: 40px auto;
+    padding: 20px;
+    width: 50%;
+    border-left: 5px double gold;
+    background: rgba(40, 40, 40, 0.65);
+    border-radius: 0 30px 30px 0;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 40px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -20px;
+    top: 30px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 0 0 4px rgba(0,0,0,0.13);
+    background: #ffe082;
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: gold;
+    margin-bottom: 6px;
+    font-size: 1.1em;
+    text-align: left;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 4px #222;
+}
+
+.timeline-content {
+    background: rgba(80,80,80,0.7);
+    color: #f5f5f5;
+    text-shadow: 0 1px 8px #222;
+    padding: 16px 22px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+    margin-bottom: 4px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-left: 4px solid #ffe082;
+    border-top: 1px solid #fff2;
+    border-bottom: 1px solid #fff2;
+    backdrop-filter: blur(2px);
+}
+.timeline-content h3{
+    margin: 0;
+    font-size: 1.2em;
+    text-shadow: 0 2px 8px #222, 0 0 2px #ffe082;
+    color: goldenrod;
+    letter-spacing: 1px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: gold;
+    font-weight: 700;
+    text-shadow: 0 2px 8px #222, 0 0 2px #ffe082;
+    letter-spacing: 1px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4, h5, h6 {
+    font-size: 1.2em;
+}
+
+p, li, ul {
+    color: #f5e9c9;
+    font-size: 1.1em;
+    font-weight: 400;
+    text-shadow: 0 1px 4px #111;
+}
+
+.zitat {
+    color: #ffe082;
+    font-style: italic;
+    font-size: 1.15em;
+    text-shadow: 0 2px 8px #222, 0 0 2px #ffe082;
+    border-left: 4px solid gold;
+    padding-left: 1em;
+    margin: 1em 0;
+    text-align: left;
+}
+
+.card h3 {
+    color: gold;
+    font-size: 1.3em;
+    font-weight: 700;
+    text-shadow: 0 2px 8px #222, 0 0 2px #ffe082;
+}
+
+.footer h3 {
+    color: #ffe082;
+    font-size: 1em;
+    text-shadow: 0 1px 4px #222;
+    font-weight: 400;
+}
