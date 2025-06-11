@@ -1,12 +1,3 @@
-import { Analytics } from "@vercel/analytics/next";
-
-export default function Page() {
-    return (
-        <div>
-            <Analytics />
-        </div>
-    )};
-Page();
 // List button logic
 document.querySelectorAll('.listbttn').forEach(button => {
     button.addEventListener("click", openlist);
